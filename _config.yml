@@ -8,7 +8,7 @@
 # Site Settings
 title                    : "Ke Jin | Academic Homepage"
 description              : "Washington University in St. Louis"
-repository               : "kejin-cs/acad-homepage.github.io"
+repository               : "kejin-cs/kejin-cs.github.io"
 url                      : "https://kejin-cs.github.io"
 baseurl                  : ""
 google_scholar_stats_use_cdn : false
