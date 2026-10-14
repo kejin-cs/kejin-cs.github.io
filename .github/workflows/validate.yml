@@ -1,0 +1,54 @@
+name: Validate Jekyll
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Check generated homepage and assets
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          from html.parser import HTMLParser
+          page = Path('_site/index.html').read_text()
+          class Check(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.ids=set(); self.images=[]
+              def handle_starttag(self, tag, attrs):
+                  attrs=dict(attrs)
+                  if 'id' in attrs: self.ids.add(attrs['id'])
+                  if tag == 'img': self.images.append(attrs.get('src',''))
+          check=Check(); check.feed(page)
+          for anchor in ['about','about-me','research','projects','gw-yolo','beaver','uav','aki','bank-marketing','honors','education','additional','contact']:
+              assert anchor in check.ids, anchor
+          for text in ['Ke Jin','Fan Zhang','Yunhan Shen','Mingqi Zhang','Kaidi Chen','Brian Du','Jiaju Zheng','Yiding Yang','jke@wustl.edu']:
+              assert text in page, text
+          for text in ['Lorem ipsum','Kaiming He','260000+','YOUR_GOOGLE_SCHOLAR_ID','Manuscript:','Evaluating Synthetic-to-Real Transfer and Noise-Class Supervision','googletagmanager.com','gs_data.json']:
+              assert text not in page, text
+          for name in ['UAV.gif','gw-yolo.png','beaver-convergence.png','bank-marketing.png','aki-monitoring.png']:
+              assert name in check.images, name
+              assert hashlib.sha256(Path(name).read_bytes()).digest() == hashlib.sha256((Path('_site') / name).read_bytes()).digest(), name
+          assert not list(Path('_site').rglob('*.pdf')), 'Unexpected PDF in published output'
+          assert not Path('.nojekyll').exists()
+          assert Path('_site/assets/css/main.css').is_file()
+          print('Homepage, anchors, media, author names, and unpublished-manuscript exclusion verified.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validated-site
+          path: _site/
+          retention-days: 7
