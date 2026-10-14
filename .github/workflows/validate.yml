@@ -27,12 +27,15 @@ jobs:
           page = Path('_site/index.html').read_text()
           class Check(HTMLParser):
               def __init__(self):
-                  super().__init__(); self.ids=set(); self.images=[]
+                  super().__init__(); self.ids=set(); self.images=[]; self.duplicates=[]
               def handle_starttag(self, tag, attrs):
                   attrs=dict(attrs)
-                  if 'id' in attrs: self.ids.add(attrs['id'])
+                  if 'id' in attrs:
+                      if attrs['id'] in self.ids: self.duplicates.append(attrs['id'])
+                      self.ids.add(attrs['id'])
                   if tag == 'img': self.images.append(attrs.get('src',''))
           check=Check(); check.feed(page)
+          assert not check.duplicates, check.duplicates
           for anchor in ['about','about-me','research','projects','gw-yolo','beaver','uav','aki','bank-marketing','honors','education','additional','contact']:
               assert anchor in check.ids, anchor
           for text in ['Ke Jin','Fan Zhang','Yunhan Shen','Mingqi Zhang','Kaidi Chen','Brian Du','Jiaju Zheng','Yiding Yang','jke@wustl.edu']:

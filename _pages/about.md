@@ -157,7 +157,7 @@ redirect_from:
 <p><strong>Programming:</strong> Python, C++, Java.<br><strong>Outside research:</strong> Badminton and swimming.</p>
 
 
-<span class="anchor" id="contact"></span>
+
 
 # Contact
 
