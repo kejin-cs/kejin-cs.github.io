@@ -24,7 +24,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Ke Jin"
-  avatar           : "images/SelfPicture.jpg"
+  avatar           : "images/SelfPicture-small.jpg"
   bio              : "M.S. Student in Computer Science"
   location         : "St. Louis, Missouri"
   employer         :
