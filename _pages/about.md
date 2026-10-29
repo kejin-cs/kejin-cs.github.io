@@ -15,7 +15,7 @@ redirect_from:
 
 <p>I am a <strong>master’s student in Computer Science</strong> at <a href="https://washu.edu/" target="_blank" rel="noopener noreferrer">Washington University in St. Louis</a>. I received my B.Eng. in Computer Science and Technology from Zhejiang A&amp;F University.</p>
 
-<p>My research and coursework span gravitational-wave data analysis, language-model verification, reinforcement learning, and clinical and tabular prediction. Across these projects, I study how data preparation, training strategies, and evaluation design affect model behavior, predictive performance, and computational cost.</p>
+<p>My research and coursework span embodied intelligence, data analysis, language-model verification, and reinforcement learning. Across these projects, I study how data processing, training strategies, and evaluation design affect model behavior, predictive performance, and computational cost.</p>
 
 
 <span class="anchor" id="research"></span>
@@ -24,10 +24,9 @@ redirect_from:
 
 
 <ul>
-          <li><strong>Reliable machine learning:</strong> Synthetic-to-real transfer and evaluation on real-world data.</li>
-          <li><strong>Language-model verification:</strong> Verification cost and probability-bound precision under computational constraints.</li>
-          <li><strong>Reinforcement learning:</strong> Curriculum learning and reward design for navigation under disturbances.</li>
-          <li><strong>Predictive modeling:</strong> Longitudinal clinical data, early-warning methods, and task-dependent model selection.</li>
+          <li><strong>Reliable machine learning</strong></li>
+          <li><strong>Language-model verification</strong></li>
+          <li><strong>Reinforcement learning</strong></li>
         </ul>
 
 
