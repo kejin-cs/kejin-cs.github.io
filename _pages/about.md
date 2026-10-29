@@ -36,6 +36,38 @@ redirect_from:
 # 📝 Selected Projects
 
 
+<span class="anchor" id="dexterous-hand-g1"></span>
+
+<div class="paper-box">
+<div class="paper-box-image"><div style="width:100%;max-width:400px"><video autoplay loop muted playsinline preload="metadata" width="1280" height="720" style="display:block;width:100%;height:auto;box-shadow:3px 3px 6px #888" aria-label="High-precision dexterous hand integration with G1 demonstration"><source src="灵巧手展示.mp4" type="video/mp4">Your browser does not support embedded video. <a href="灵巧手展示.mp4">View the demonstration</a>.</video></div></div>
+<div class="paper-box-text" markdown="1">
+
+### High-Precision Dexterous Hand Integration with G1
+
+<p><strong>Ke Jin</strong></p>
+<p>This project focuses on integrating a high-precision dexterous hand with G1. The video shows a demonstration of the project.</p>
+
+</div>
+</div>
+
+
+<span class="anchor" id="uav"></span>
+
+<div class="paper-box">
+<div class="paper-box-image"><div><img src="UAV.gif" alt="Animated two-dimensional UAV navigation illustration with static and moving obstacles, wind vectors, a starting position, and a goal." width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
+
+### PPO-Based UAV Navigation under Dynamic Disturbances
+
+<p><strong>Ke Jin</strong>, Kaidi Chen</p>
+<p><em>CSE 5100 Deep Reinforcement Learning · Spring 2026 · Instructor: Chongjie Zhang</em></p>
+<p>We studied curriculum learning and reward shaping for PPO-based navigation in a two-dimensional UAV simulation with moving obstacles and random wind disturbances.</p>
+<p>My work focused on the training pipeline, reward design, and a seven-stage curriculum. Building on a teammate-developed environment, I also worked on scenario extensions and policy evaluation. Qualitative ablations examined learning behavior and obstacle-clearance preferences.</p>
+
+</div>
+</div>
+
+
 <span class="anchor" id="gw-yolo"></span>
 
 <div class="paper-box">
@@ -64,23 +96,6 @@ redirect_from:
 <p><em>CSE 5370 Trustworthy Autonomy · Spring 2026 · Instructor: Hussein Sibai</em></p>
 <p>Using the BEAVER branch-and-bound framework, we examined how sampling temperature, model size, and AWQ quantization affect verification cost and probability-bound precision.</p>
 <p>I primarily handled single-GPU deployment, inference-backend configuration, batch experiments, and log organization, and contributed to the analysis of search behavior under limited computational budgets.</p>
-
-</div>
-</div>
-
-
-<span class="anchor" id="uav"></span>
-
-<div class="paper-box">
-<div class="paper-box-image"><div><img src="UAV.gif" alt="Animated two-dimensional UAV navigation illustration with static and moving obstacles, wind vectors, a starting position, and a goal." width="100%"></div></div>
-<div class="paper-box-text" markdown="1">
-
-### PPO-Based UAV Navigation under Dynamic Disturbances
-
-<p><strong>Ke Jin</strong>, Kaidi Chen</p>
-<p><em>CSE 5100 Deep Reinforcement Learning · Spring 2026 · Instructor: Chongjie Zhang</em></p>
-<p>We studied curriculum learning and reward shaping for PPO-based navigation in a two-dimensional UAV simulation with moving obstacles and random wind disturbances.</p>
-<p>My work focused on the training pipeline, reward design, and a seven-stage curriculum. Building on a teammate-developed environment, I also worked on scenario extensions and policy evaluation. Qualitative ablations examined learning behavior and obstacle-clearance preferences.</p>
 
 </div>
 </div>

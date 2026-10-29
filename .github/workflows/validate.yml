@@ -36,7 +36,7 @@ jobs:
                   if tag == 'img': self.images.append(attrs.get('src',''))
           check=Check(); check.feed(page)
           assert not check.duplicates, check.duplicates
-          for anchor in ['about','about-me','research','projects','gw-yolo','beaver','uav','aki','bank-marketing','honors','education','additional','contact']:
+          for anchor in ['about','about-me','research','projects','dexterous-hand-g1','gw-yolo','beaver','uav','aki','bank-marketing','honors','education','additional','contact']:
               assert anchor in check.ids, anchor
           for text in ['Ke Jin','Fan Zhang','Yunhan Shen','Mingqi Zhang','Kaidi Chen','Brian Du','Jiaju Zheng','Yiding Yang','jke@wustl.edu']:
               assert text in page, text
@@ -45,6 +45,15 @@ jobs:
           for name in ['UAV.gif','gw-yolo.png','beaver-convergence.png','bank-marketing.png','aki-monitoring.png']:
               assert name in check.images, name
               assert hashlib.sha256(Path(name).read_bytes()).digest() == hashlib.sha256((Path('_site') / name).read_bytes()).digest(), name
+          projects = ['dexterous-hand-g1', 'uav', 'gw-yolo', 'beaver', 'aki', 'bank-marketing']
+          positions = [page.index('id="' + anchor + '"') for anchor in projects]
+          assert positions == sorted(positions), 'Unexpected project order'
+          video_tag = page[page.index('<video '):page.index('</video>')]
+          for attribute in ['autoplay', 'loop', 'muted', 'playsinline']:
+              assert attribute in video_tag, attribute
+          assert 'controls' not in video_tag
+          video = Path('灵巧手展示.mp4')
+          assert hashlib.sha256(video.read_bytes()).digest() == hashlib.sha256((Path('_site') / video).read_bytes()).digest()
           assert not list(Path('_site').rglob('*.pdf')), 'Unexpected PDF in published output'
           assert not Path('.nojekyll').exists()
           assert Path('_site/assets/css/main.css').is_file()
