@@ -42,18 +42,24 @@ jobs:
               assert text in page, text
           for text in ['Lorem ipsum','Kaiming He','260000+','YOUR_GOOGLE_SCHOLAR_ID','Manuscript:','googletagmanager.com','gs_data.json']:
               assert text not in page, text
-          for name in ['UAV.gif','gw-yolo.png','beaver-convergence.png','bank-marketing.png','aki-monitoring.png']:
+          for name in ['UAV.gif','beaver-convergence.png','bank-marketing.png','aki-monitoring.png']:
               assert name in check.images, name
               assert hashlib.sha256(Path(name).read_bytes()).digest() == hashlib.sha256((Path('_site') / name).read_bytes()).digest(), name
-          projects = ['dexterous-hand-g1', 'uav', 'gw-yolo', 'beaver', 'aki', 'bank-marketing']
+          projects = ['dexterous-hand-g1', 'gw-yolo', 'uav', 'beaver', 'aki', 'bank-marketing']
           positions = [page.index('id="' + anchor + '"') for anchor in projects]
           assert positions == sorted(positions), 'Unexpected project order'
-          video_tag = page[page.index('<video '):page.index('</video>')]
-          for attribute in ['autoplay', 'loop', 'muted', 'playsinline']:
-              assert attribute in video_tag, attribute
-          assert 'controls' not in video_tag
-          video = Path('灵巧手展示.mp4')
-          assert hashlib.sha256(video.read_bytes()).digest() == hashlib.sha256((Path('_site') / video).read_bytes()).digest()
+          import re
+          video_tags = re.findall(r'<video\b[^>]*>.*?</video>', page, flags=re.S)
+          assert len(video_tags) == 2
+          for video_tag in video_tags:
+              for attribute in ['autoplay', 'loop', 'muted', 'playsinline']:
+                  assert attribute in video_tag, attribute
+              assert 'controls' not in video_tag
+          for name in ['灵巧手展示.mp4', 'gw-yolo-chirp-segmentation-demo.mp4']:
+              assert name in page
+              video = Path(name)
+              assert hashlib.sha256(video.read_bytes()).digest() == hashlib.sha256((Path('_site') / video).read_bytes()).digest()
+          assert '<strong>EIRT 2026</strong>' in page
           assert not list(Path('_site').rglob('*.pdf')), 'Unexpected PDF in published output'
           assert not Path('.nojekyll').exists()
           assert Path('_site/assets/css/main.css').is_file()
