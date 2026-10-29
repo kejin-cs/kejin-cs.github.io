@@ -38,9 +38,9 @@ jobs:
           assert not check.duplicates, check.duplicates
           for anchor in ['about','about-me','research','projects','dexterous-hand-g1','gw-yolo','beaver','uav','aki','bank-marketing','honors','education','additional','contact']:
               assert anchor in check.ids, anchor
-          for text in ['Ke Jin','Fan Zhang','Yunhan Shen','Mingqi Zhang','Kaidi Chen','Brian Du','Jiaju Zheng','Yiding Yang','jke@wustl.edu']:
+          for text in ['Ke Jin','Fan Zhang','Yunhan Shen','Mingqi Zhang','Kaidi Chen','Brian Du','Jiaju Zheng','Yiding Yang','jke@wustl.edu','Evaluating Synthetic-to-Real Transfer and Noise-Class Supervision for Gravitational-Wave Segmentation','EIRT 2026','Pending Publication']:
               assert text in page, text
-          for text in ['Lorem ipsum','Kaiming He','260000+','YOUR_GOOGLE_SCHOLAR_ID','Manuscript:','Evaluating Synthetic-to-Real Transfer and Noise-Class Supervision','googletagmanager.com','gs_data.json']:
+          for text in ['Lorem ipsum','Kaiming He','260000+','YOUR_GOOGLE_SCHOLAR_ID','Manuscript:','googletagmanager.com','gs_data.json']:
               assert text not in page, text
           for name in ['UAV.gif','gw-yolo.png','beaver-convergence.png','bank-marketing.png','aki-monitoring.png']:
               assert name in check.images, name
@@ -57,7 +57,7 @@ jobs:
           assert not list(Path('_site').rglob('*.pdf')), 'Unexpected PDF in published output'
           assert not Path('.nojekyll').exists()
           assert Path('_site/assets/css/main.css').is_file()
-          print('Homepage, anchors, media, author names, and unpublished-manuscript exclusion verified.')
+          print('Homepage, anchors, media, author names, and PDF exclusion verified.')
           PY
       - uses: actions/upload-artifact@v4
         with:

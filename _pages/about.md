@@ -73,9 +73,10 @@ redirect_from:
 <div class="paper-box-image"><div><img src="gw-yolo.png" alt="GW150914 H1 time-frequency spectrogram with a catalog-derived chirp label, showing frequency versus time relative to merger." width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 
-### GW-YOLO: Synthetic-to-Real Gravitational-Wave Segmentation
+### Evaluating Synthetic-to-Real Transfer and Noise-Class Supervision for Gravitational-Wave Segmentation
 
-<p><strong>Ke Jin</strong> (corresponding author), Fan Zhang, Yunhan Shen</p>
+<p><strong>Ke Jin</strong> (corresponding author), Fan Zhang, Yunhan Shen, Jiaju Zheng</p>
+<p><em>2026 International Conference on Embodied Intelligent Robotics Technology (EIRT 2026) · Pending Publication</em></p>
 <p>Building on GW-YOLO, we evaluate synthetic-to-real transfer across six YOLOv8 segmentation training strategies. We compare responses to real gravitational-wave events and false positives on continuous detector noise, examining how synthetic, semi-synthetic, and catalog-derived supervision affect model behavior.</p>
 <p>The study also evaluates how background selection and preprocessing change measured false-positive rates and model rankings.</p>
 
