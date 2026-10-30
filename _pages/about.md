@@ -53,7 +53,7 @@ redirect_from:
 <span class="anchor" id="gw-yolo"></span>
 
 <div class="paper-box">
-<div class="paper-box-image"><div style="width:100%;max-width:400px"><video autoplay loop muted playsinline preload="metadata" width="1060" height="642" style="display:block;width:100%;height:auto;box-shadow:3px 3px 6px #888" aria-label="GW-YOLO chirp segmentation demonstration"><source src="gw-yolo-chirp-segmentation-demo.mp4" type="video/mp4">Your browser does not support embedded video. <a href="gw-yolo-chirp-segmentation-demo.mp4">View the demonstration</a>.</video></div></div>
+<div class="paper-box-image"><div style="width:100%;max-width:400px"><img src="gw-yolo-chirp-segmentation-demo-0p5s.gif" alt="Animated GW-YOLO chirp segmentation demonstration with 0.5-second frames." width="1060" height="642" style="display:block;width:100%;height:auto;box-shadow:3px 3px 6px #888"></div></div>
 <div class="paper-box-text" markdown="1">
 
 ### Evaluating Synthetic-to-Real Transfer and Noise-Class Supervision for Gravitational-Wave Segmentation
