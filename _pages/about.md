@@ -38,7 +38,7 @@ redirect_from:
 <span class="anchor" id="dexterous-hand-g1"></span>
 
 <div class="paper-box">
-<div class="paper-box-image"><div style="width:100%;max-width:400px"><video autoplay loop muted playsinline preload="metadata" width="1280" height="720" style="display:block;width:100%;height:auto;box-shadow:3px 3px 6px #888" aria-label="High-precision dexterous hand integration with G1 demonstration"><source src="灵巧手展示.mp4" type="video/mp4">Your browser does not support embedded video. <a href="灵巧手展示.mp4">View the demonstration</a>.</video></div></div>
+<div class="paper-box-image"><div style="width:100%;max-width:400px"><video autoplay loop muted playsinline preload="metadata" width="640" height="480" style="display:block;width:100%;height:auto;box-shadow:3px 3px 6px #888" aria-label="High-precision dexterous hand integration with G1 cloth manipulation demonstration at 5x speed"><source src="cloth_front_5x_labeled.mp4" type="video/mp4">Your browser does not support embedded video. <a href="cloth_front_5x_labeled.mp4">View the demonstration</a>.</video></div></div>
 <div class="paper-box-text" markdown="1">
 
 ### High-Precision Dexterous Hand Integration with G1
