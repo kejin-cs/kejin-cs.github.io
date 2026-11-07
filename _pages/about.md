@@ -13,7 +13,9 @@ redirect_from:
 <span class="anchor" id="about-me"></span>
 
 
-<p>I am a <strong>master’s student in Computer Science</strong> at <a href="https://washu.edu/" target="_blank" rel="noopener noreferrer">Washington University in St. Louis</a>. I received my B.Eng. in Computer Science and Technology from Zhejiang A&amp;F University.</p>
+<p>I am a <strong>master’s student in Computer Science</strong> at <a href="https://washu.edu/" target="_blank" rel="noopener noreferrer">Washington University in St. Louis</a>. My faculty advisor is <a href="https://engineering.washu.edu/faculty/Yixin-Chen.html" target="_blank" rel="noopener noreferrer">Prof. Yixin Chen</a>.</p>
+
+<p>I received my B.Eng. in Computer Science and Technology from Zhejiang A&amp;F University, where I was mentored by Dr. Tiansheng Zhu.</p>
 
 <p>My research and coursework span embodied intelligence, data analysis, language-model verification, and reinforcement learning. Across these projects, I study how data processing, training strategies, and evaluation design affect model behavior, predictive performance, and computational cost.</p>
 
