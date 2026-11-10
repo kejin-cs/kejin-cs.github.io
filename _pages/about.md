@@ -40,7 +40,7 @@ redirect_from:
 <span class="anchor" id="dexterous-hand-g1"></span>
 
 <div class="paper-box">
-<div class="paper-box-image"><div style="width:100%;max-width:400px"><video autoplay loop muted playsinline preload="metadata" width="640" height="480" style="display:block;width:100%;height:auto;box-shadow:3px 3px 6px #888" aria-label="Autonomous whole-body cloth manipulation with G1 for healthcare applications at 5x speed"><source src="whole_5x_labeled.mp4" type="video/mp4">Your browser does not support embedded video. <a href="whole_5x_labeled.mp4">View the demonstration</a>.</video></div></div>
+<div class="paper-box-image"><div style="width:100%;max-width:400px"><video autoplay loop muted playsinline preload="metadata" width="960" height="704" style="display:block;width:100%;height:auto;box-shadow:3px 3px 6px #888" aria-label="Autonomous whole-body cloth manipulation with G1 for healthcare applications at 5x speed"><source src="whole_with_background_5x.mp4" type="video/mp4">Your browser does not support embedded video. <a href="whole_with_background_5x.mp4">View the demonstration</a>.</video></div></div>
 <div class="paper-box-text" markdown="1">
 
 ### Autonomous Whole-Body Cloth Manipulation with G1 for Healthcare Applications

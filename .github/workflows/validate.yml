@@ -55,7 +55,7 @@ jobs:
               for attribute in ['autoplay', 'loop', 'muted', 'playsinline']:
                   assert attribute in video_tag, attribute
               assert 'controls' not in video_tag
-          for name in ['whole_5x_labeled.mp4']:
+          for name in ['whole_with_background_5x.mp4']:
               assert name in page
               video = Path(name)
               assert hashlib.sha256(video.read_bytes()).digest() == hashlib.sha256((Path('_site') / video).read_bytes()).digest()
