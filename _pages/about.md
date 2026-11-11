@@ -27,14 +27,37 @@ redirect_from:
 
 <ul>
           <li><strong>Reliable machine learning</strong></li>
-          <li><strong>Language-model verification</strong></li>
           <li><strong>Reinforcement learning</strong></li>
+          <li><strong>Language-model verification</strong></li>
         </ul>
 
 
 <span class="anchor" id="projects"></span>
 
 # 📝 Selected Projects
+
+
+<span class="anchor" id="multi-humanoid-collaboration"></span>
+
+<div class="paper-box">
+<div class="paper-box-image">
+  <div style="width:100%;max-width:400px">
+    <video autoplay loop muted playsinline preload="metadata" width="960" height="720" style="display:block;width:100%;height:auto;box-shadow:3px 3px 6px #888" aria-label="Multi-humanoid collaboration demonstration">
+      <source src="multi-humanoid-collaboration.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="multi-humanoid-collaboration.mp4">View the demonstration</a>.
+    </video>
+  </div>
+</div>
+<div class="paper-box-text" markdown="1">
+
+### Verifiable Capacity Contracts for Agent-Directed Multi-Humanoid Collaboration
+
+<p>Sijun Jia†, <strong>Ke Jin†</strong>, Edward Zhang, Y. Lauren Dong</p>
+<p><em>† Equal contribution.</em></p>
+<p>We trained two Unitree G1 humanoids to carry objects together in Isaac Sim by retargeting paired human demonstrations and refining their coordination through reinforcement learning. We developed a capacity contract that checks whether the robots can share uncertain loads at proposed contact points and identifies feasible contact adjustments. In a controlled two-support evaluation, these adjustments increased the number of mechanically feasible configurations from 109 to 162 out of 192.</p>
+
+</div>
+</div>
 
 
 <span class="anchor" id="dexterous-hand-g1"></span>

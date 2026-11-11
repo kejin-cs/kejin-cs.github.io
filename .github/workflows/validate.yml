@@ -45,18 +45,18 @@ jobs:
           for name in ['UAV.gif','gw-yolo-chirp-segmentation-demo-0p5s.gif','beaver-convergence.png','bank-marketing.png','aki-monitoring.png']:
               assert name in check.images, name
               assert hashlib.sha256(Path(name).read_bytes()).digest() == hashlib.sha256((Path('_site') / name).read_bytes()).digest(), name
-          projects = ['dexterous-hand-g1', 'gw-yolo', 'uav', 'beaver', 'aki', 'bank-marketing']
+          projects = ['multi-humanoid-collaboration', 'dexterous-hand-g1', 'gw-yolo', 'uav', 'beaver', 'aki', 'bank-marketing']
           positions = [page.index('id="' + anchor + '"') for anchor in projects]
           assert positions == sorted(positions), 'Unexpected project order'
           import re
           video_tags = re.findall(r'<video\b[^>]*>.*?</video>', page, flags=re.S)
-          assert len(video_tags) == 1
-          for video_tag in video_tags:
+          video_names = ['multi-humanoid-collaboration.mp4', 'better_background_5x.mp4']
+          assert len(video_tags) == len(video_names)
+          for video_tag, name in zip(video_tags, video_names):
+              assert f'src="{name}"' in video_tag, name
               for attribute in ['autoplay', 'loop', 'muted', 'playsinline']:
                   assert attribute in video_tag, attribute
               assert 'controls' not in video_tag
-          for name in ['better_background_5x.mp4']:
-              assert name in page
               video = Path(name)
               assert hashlib.sha256(video.read_bytes()).digest() == hashlib.sha256((Path('_site') / video).read_bytes()).digest()
           assert '<strong>EIRT 2026</strong>' in page
